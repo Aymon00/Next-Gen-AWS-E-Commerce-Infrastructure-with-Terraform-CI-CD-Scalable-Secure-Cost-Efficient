@@ -11,35 +11,20 @@ The pipeline performs the following steps:
 
 The pipeline is triggered on **any new commit to the `main` branch**.  
 
-## aws-ecommerce-infra/
-- │── modules/
-- │   ├── networking/
-- │   │   ├── vpc.tf
-- │   │   ├── subnets.tf
-- │   │   ├── security-groups.tf
-- │   │   ├── variables.tf
-- │   │   ├── outputs.tf
-- │   ├── compute/
-- │   │   ├── ec2.tf
-- │   │   ├── auto-scaling.tf
-- │   │   ├── variables.tf
-- │   │   ├── outputs.tf
-- │   ├── database/
-- │   │   ├── rds.tf
-- │   │   ├── variables.tf
-- │   │   ├── outputs.tf
-- │   ├── storage/
-- │   │   ├── s3.tf
-- │   │   ├── variables.tf
-- │   │   ├── outputs.tf
-- │
-- ├── main.tf
-- ├── variables.tf
-- ├── outputs.tf
-- ├── terraform.tfvars
-- ├── backend.tf
-- ├── README.md
-- ├── .gitignore
+aws-ecommerce-infra/
+- │── modules/          # Contains all core infrastructure modules
+- │   ├── networking/   # Networking: VPC, Subnets, SG, Route Tables, NAT, IGW
+- │   ├── compute/      # Compute: EC2, Auto Scaling Group
+- │   ├── database/     # Database: RDS (MySQL/PostgreSQL)
+- │   ├── storage/      # Storage: S3 Bucket
+- │── main.tf           # Calls all modules
+- │── providers.tf      # Cloud provider (AWS)
+- │── variables.tf      # Terraform variables
+- │── outputs.tf        # Outputs
+- │── backend.tf        # Backend configuration for Terraform State
+- │── Jenkinsfile       # CI/CD with Jenkins
+- │── .gitignore        # Ignore unnecessary files
+- │── README.md         # Project documentation
 
 This project sets up a full AWS infrastructure for an E-Commerce platform, including:
 
