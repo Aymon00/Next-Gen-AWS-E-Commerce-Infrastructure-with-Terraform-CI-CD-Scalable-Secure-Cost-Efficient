@@ -17,6 +17,7 @@ aws-ecommerce-infra/
 - │   ├── compute/      # Compute: EC2, Auto Scaling Group
 - │   ├── database/     # Database: RDS (MySQL/PostgreSQL)
 - │   ├── storage/      # Storage: S3 Bucket
+
 - │── main.tf           # Calls all modules
 - │── providers.tf      # Cloud provider (AWS)
 - │── variables.tf      # Terraform variables
