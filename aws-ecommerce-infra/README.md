@@ -27,3 +27,12 @@ aws-ecommerce-infra/
 - ├── backend.tf
 - ├── README.md
 - ├── .gitignore
+
+This project sets up a full AWS infrastructure for an E-Commerce platform, including:
+
+- **Networking:** VPC, Public & Private Subnets, Security Groups
+- **Compute:** EC2 Instances, Auto Scaling Group, Application Load Balancer
+- **Storage:** S3 for static content
+- **Database:** RDS (MySQL/PostgreSQL)
+- **IAM:** Secure roles and policies
+- **Monitoring:** CloudWatch for logs and metrics
