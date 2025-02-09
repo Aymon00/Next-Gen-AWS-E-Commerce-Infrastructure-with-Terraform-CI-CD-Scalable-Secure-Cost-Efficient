@@ -1,0 +1,29 @@
+aws-ecommerce-infra/
+│── modules/
+│   ├── networking/
+│   │   ├── vpc.tf
+│   │   ├── subnets.tf
+│   │   ├── security-groups.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── compute/
+│   │   ├── ec2.tf
+│   │   ├── auto-scaling.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── database/
+│   │   ├── rds.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── storage/
+│   │   ├── s3.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── terraform.tfvars
+├── backend.tf
+├── README.md
+├── .gitignore
