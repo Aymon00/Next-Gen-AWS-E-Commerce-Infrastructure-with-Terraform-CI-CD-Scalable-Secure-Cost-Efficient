@@ -1,4 +1,5 @@
 # 12- Create ec2 instances
+
 resource "aws_key_pair" "MyKey_SSH" {
   key_name   = "MyKey"
   public_key = file("~/.ssh/id_rsa.pub")
@@ -14,18 +15,23 @@ resource "aws_instance" "web" {
   root_block_device {
     encrypted = true
   }
+
   user_data = <<-EOF
     #!/bin/bash
         yum update -y
         yum install httpd -y     
         systemctl start httpd    
         systemctl enable httpd   
-        echo "This is server *1* in AWS Region US-EAST-1 in AZ US-EAST-1B " > /var/www/html/index.html
-        EOF
+        echo "This is server *1* in AWS Region US-EAST-1 in AZ US-EAST-1A" > /var/www/html/index.html
+  EOF
+
+  user_data = file("${path.module}/jenkins_installation.sh")
+
   tags = {
-    Name = "web_instance"
+    Name = "web_Jenkins_instance"
   }
 }
+
 resource "aws_instance" "app" {
   ami                    = "ami-0dfcb1ef8550277af"
   instance_type          = "t2.micro"
@@ -36,14 +42,18 @@ resource "aws_instance" "app" {
   root_block_device {
     encrypted = true
   }
+
   user_data = <<-EOF
         #!/bin/bash
         yum update -y
         yum install httpd -y     
         systemctl start httpd    
         systemctl enable httpd   
-        echo "This is server *1* in AWS Region US-EAST-1 in AZ US-EAST-1B " > /var/www/html/index.html
-        EOF
+        echo "This is server *1* in AWS Region US-EAST-1 in AZ US-EAST-1B" > /var/www/html/index.html
+  EOF
+
+  user_data = file("${path.module}/jenkins_installation.sh")
+
   tags = {
     Name = "APP_instance"
   }
