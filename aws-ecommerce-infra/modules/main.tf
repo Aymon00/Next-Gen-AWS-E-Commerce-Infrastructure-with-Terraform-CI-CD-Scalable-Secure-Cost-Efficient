@@ -13,3 +13,7 @@ module "database" {
 module "storage" {
   source = "./modules/storage"
 }
+
+module "Cloud_Provider" {
+  source = "./modules/Cloud_Provider"
+}
