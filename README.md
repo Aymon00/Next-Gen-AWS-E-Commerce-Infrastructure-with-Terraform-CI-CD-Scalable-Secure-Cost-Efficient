@@ -2,10 +2,13 @@
 
 **Scalable, Secure, and Cost-Efficient AWS Infrastructure for E-Commerce Applications**
 
+[![Architecture Diagram](https://img.shields.io/badge/ARCHITECTURE_DIAGRAM-View_on_Notion-9cf?style=for-the-badge&logo=notion)](https://www.notion.so/Next-Gen-AWS-E-Commerce-Infrastructure-with-Terraform-CI-CD-Scalable-Secure-Cost-Efficient-189d1728bdbc803fa47be55f0b5cf110)
+
 [![Terraform](https://img.shields.io/badge/Terraform-1.5+-blue?logo=terraform)](https://www.terraform.io/)
 [![AWS](https://img.shields.io/badge/AWS-Cloud_Infra-orange?logo=amazonaws)](https://aws.amazon.com/)
 [![LinkedIn](https://img.shields.io/badge/Connect-Ayman_Mohamed-blue?logo=linkedin)](https://www.linkedin.com/in/ayman-mohamed1043/)
-[![Architecture Diagram](https://img.shields.io/badge/ARCHITECTURE_DIAGRAM-View_on_Notion-9cf?style=for-the-badge&logo=notion)](https://www.notion.so/Next-Gen-AWS-E-Commerce-Infrastructure-with-Terraform-CI-CD-Scalable-Secure-Cost-Efficient-189d1728bdbc803fa47be55f0b5cf110)
+
+
 
 ---
 
