@@ -21,21 +21,6 @@ A **highly scalable and secure AWS infrastructure** designed for e-commerce appl
 | 🔄 **CI/CD Pipeline** | Automated deployment with GitHub Actions & CodePipeline |
 | 🌎 **Global Reach** | Multi-Region setup for maximum availability |
 
----
-
-## 🏗️ AWS Architecture Stack
-```mermaid
-graph TD;
-    A[User Request] -->|HTTPS| B[Route 53 DNS]
-    B -->|Traffic Distribution| C[Application Load Balancer]
-    C -->|Load Balancing| D[Auto Scaling Group - EC2]
-    C -->|Microservices| E[ECS Fargate]
-    D -->|Database Connection| F[RDS MySQL]
-    E -->|Storage| G[S3 Bucket - Static Assets]
-    F -->|Caching| H[ElastiCache Redis]
-    D -->|Logging| I[CloudWatch Logs]
-    I -->|Monitoring| J[Grafana Dashboard]
-```
 
 ---
 
@@ -102,6 +87,21 @@ $ terraform apply -auto-approve
 ```
 
 ---
+---
+
+## 🏗️ AWS Architecture Stack
+```mermaid
+graph TD;
+    A[User Request] -->|HTTPS| B[Route 53 DNS]
+    B -->|Traffic Distribution| C[Application Load Balancer]
+    C -->|Load Balancing| D[Auto Scaling Group - EC2]
+    C -->|Microservices| E[ECS Fargate]
+    D -->|Database Connection| F[RDS MySQL]
+    E -->|Storage| G[S3 Bucket - Static Assets]
+    F -->|Caching| H[ElastiCache Redis]
+    D -->|Logging| I[CloudWatch Logs]
+    I -->|Monitoring| J[Grafana Dashboard]
+```
 
 ## 🤝 Connect with Me
 - **LinkedIn**: [Ayman Mohamed](https://www.linkedin.com/in/ayman-mohamed1043/)
@@ -110,14 +110,4 @@ $ terraform apply -auto-approve
 - **AWS**: [Amazon Web Services](https://aws.amazon.com/)
 
 ---
-
-## 🎯 Future Enhancements
-- Implement AWS Lambda for serverless processing.
-- Add CloudFront CDN for faster content delivery.
-- Optimize cost with AWS Savings Plans and Spot Instances.
-- Integrate AWS Backup for automated disaster recovery.
-
----
-
-🚀 **Let's build the next-gen cloud infrastructure together!**
 
